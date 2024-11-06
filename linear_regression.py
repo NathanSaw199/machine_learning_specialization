@@ -3,10 +3,10 @@ import matplotlib.pyplot as plt
 from lab_utils_uni import plt_intuition,plt_stationary,plt_update_onclick,soup_bowl
 plt.style.use(r"C:\Users\Saw\Desktop\machine_learning\deeplearning1.mplstyle")
 
-# x_train = np.array([1.0,2.0])
-# y_train = np.array([300,500])
-x_train = np.array([1.0, 1.7, 2.0, 2.5, 3.0, 3.2])
-y_train = np.array([250, 300, 480,  430,   630, 730,])
+x_train = np.array([1.0,2.0])
+y_train = np.array([300,500])
+# x_train = np.array([1.0, 1.7, 2.0, 2.5, 3.0, 3.2])
+# y_train = np.array([250, 300, 480,  430,   630, 730,])
 def compute_cost(x,y,w,b):
      """
     Computes the cost function for linear regression.
