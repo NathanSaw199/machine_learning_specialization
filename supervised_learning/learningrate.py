@@ -132,5 +132,11 @@ print(f"(w,b) found by gradient descent: ( {w_final:8.4f},{b_final:8.4f})")
 print(f"1000 sqft house prediction {w_final*1.0 + b_final:0.1f} Thousand dollars")
 print(f"1200 sqft house prediction {w_final*1.2 + b_final:0.1f} Thousand dollars")
 print(f"2000 sqft house prediction {w_final*2.0 + b_final:0.1f} Thousand dollars")
-fig, ax = plt.subplots(1,1, figsize=(12, 6))
-plt_contour_wgrad(x_train, y_train, p_hist, ax)
+# fig, ax = plt.subplots(1,1, figsize=(12, 6))
+# plt_contour_wgrad(x_train, y_train, p_hist, ax)
+# plt.show()
+#######
+# fig, ax = plt.subplots(1,1, figsize=(12, 4))
+# plt_contour_wgrad(x_train, y_train, p_hist, ax, w_range=[180, 220, 0.5], b_range=[80, 120, 0.5],
+#             contours=[1,5,10,20],resolution=0.5)
+# plt.show()
