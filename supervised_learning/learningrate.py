@@ -106,15 +106,15 @@ def gradient_descent(x, y, w_in, b_in, alpha, num_iters, cost_function, gradient
  
     return w, b, J_history, p_history #return w and J,w history for graphing
 
-#initialize the values of w and b parameters
-w_init = 0
-b_init = 0
-#some gradient descent settings
-iternations = 10000
-tmp_alpha = 1.0e-2
-# run gradient descent
-w_final,b_final,j_hist,p_hist = gradient_descent(x_train,y_train,w_init,b_init,tmp_alpha,iternations,compute_cost,compute_gradient)
-print(f"(w,b) found by gradient descent: ( {w_final:8.4f},{b_final:8.4f})")
+##initialize the values of w and b parameters
+# w_init = 0
+# b_init = 0
+# #some gradient descent settings
+# iternations = 10000
+# tmp_alpha = 1.0e-2
+# # run gradient descent
+# w_final,b_final,j_hist,p_hist = gradient_descent(x_train,y_train,w_init,b_init,tmp_alpha,iternations,compute_cost,compute_gradient)
+# print(f"(w,b) found by gradient descent: ( {w_final:8.4f},{b_final:8.4f})")
 
 
 
@@ -129,9 +129,11 @@ print(f"(w,b) found by gradient descent: ( {w_final:8.4f},{b_final:8.4f})")
 # ax1.set_ylabel('Cost')            ;  ax2.set_ylabel('Cost') 
 # ax1.set_xlabel('iteration step')  ;  ax2.set_xlabel('iteration step') 
 # plt.show()
-print(f"1000 sqft house prediction {w_final*1.0 + b_final:0.1f} Thousand dollars")
-print(f"1200 sqft house prediction {w_final*1.2 + b_final:0.1f} Thousand dollars")
-print(f"2000 sqft house prediction {w_final*2.0 + b_final:0.1f} Thousand dollars")
+##########
+# print(f"1000 sqft house prediction {w_final*1.0 + b_final:0.1f} Thousand dollars")
+# print(f"1200 sqft house prediction {w_final*1.2 + b_final:0.1f} Thousand dollars")
+# print(f"2000 sqft house prediction {w_final*2.0 + b_final:0.1f} Thousand dollars")
+###########
 # fig, ax = plt.subplots(1,1, figsize=(12, 6))
 # plt_contour_wgrad(x_train, y_train, p_hist, ax)
 # plt.show()
@@ -139,4 +141,18 @@ print(f"2000 sqft house prediction {w_final*2.0 + b_final:0.1f} Thousand dollars
 # fig, ax = plt.subplots(1,1, figsize=(12, 4))
 # plt_contour_wgrad(x_train, y_train, p_hist, ax, w_range=[180, 220, 0.5], b_range=[80, 120, 0.5],
 #             contours=[1,5,10,20],resolution=0.5)
+# plt.show()
+#check with higher learning rate
+# # initialize parameters
+# w_init = 0
+# b_init = 0
+# # set alpha to a large value
+# iterations = 10
+# tmp_alpha = 8.0e-1
+# # run gradient descent
+# w_final, b_final, J_hist, p_hist = gradient_descent(x_train ,y_train, w_init, b_init, tmp_alpha, 
+#                                                     iterations, compute_cost, compute_gradient)
+# print(f"(w,b) found by gradient descent: ( {w_final:8.4f},{b_final:8.4f})")
+
+# plt_divergence(p_hist, J_hist,x_train, y_train)
 # plt.show()
