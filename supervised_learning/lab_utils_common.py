@@ -6,7 +6,7 @@ lab_utils_common.py
 import numpy as np
 import matplotlib.pyplot as plt
 
-plt.style.use('/Users/nathansaw/Desktop/untitled folder/machine_learning_specialization/supervised_learning/deeplearning1.mplstyle')
+plt.style.use(r'C:\Users\Saw\Desktop\machine learning\machine_learning_specialization\supervised_learning\deeplearning1.mplstyle')
 dlblue = '#0096ff'; dlorange = '#FF9300'; dldarkred='#C00000'; dlmagenta='#FF40FF'; dlpurple='#7030A0';
 dlcolors = [dlblue, dlorange, dldarkred, dlmagenta, dlpurple]
 dlc = dict(dlblue = '#0096ff', dlorange = '#FF9300', dldarkred='#C00000', dlmagenta='#FF40FF', dlpurple='#7030A0')
