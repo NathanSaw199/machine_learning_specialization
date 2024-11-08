@@ -143,6 +143,15 @@ def compute_cost(X,y,w,b):
 #cost is printed to show the error of the model’s predictions with the initial weights and bias.
 
 cost = compute_cost(X_train,y_train,w_init,b_init)
+#m = 3 (since there are 3 examples).
+#cost = 0 (to accumulate the squared errors).
+#Loop Through Each Example:
+#For the first example i = 0:
+#X[0] = [2104, 5, 1, 45]
+#y[0] = 460
+#Calculate the prediction f_wb_i:
+#f_wb_i = 2104 * 0.391 + 5 * 18.75 + 1 * -53.36 + 45 * -26.42 + 785.18 = 458.73
+
 print(f"cost: {cost}")
 def compute_gradient(X, y, w, b): 
     """
