@@ -37,7 +37,7 @@ print(house_price)
 #      total_cost = (1 / (2 * m)) * cost_sum  
 #      return total_cost
 # x_train = np.array([1.0,2.0])
-# y_train = np.array([300,500])
+# y_train = np.array([300,500])+
 # w = 150
 # b = 100
 # # for For x[0] = 1.0, the model's prediction is:
