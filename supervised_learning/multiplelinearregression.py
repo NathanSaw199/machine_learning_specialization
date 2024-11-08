@@ -1,7 +1,7 @@
 import copy,math
 import numpy as np
 import matplotlib.pyplot as plt
-plt.style.use(r"C:\Users\Saw\Desktop\machine learning\machine_learning_specialization\supervised_learning\deeplearning1.mplstyle")
+plt.style.use(r"/Users/nathansaw/Desktop/untitled folder/machine_learning_specialization/supervised_learning/deeplearning1.mplstyle")
 np.set_printoptions(precision=2)    ## reduced display precision on numpy arrays
 X_train = np.array([[2104, 5, 1, 45], [1416, 3, 2, 40], [852, 2, 1, 35]])
 y_train = np.array([460, 232, 178])
@@ -34,7 +34,7 @@ def predict_single_loop(x,w,b):
     return p
 # get a row from our training data
 
-x_vec =X_train[0,:]
+x_vec =X_train[1,:]
 print(f"x_vec shape: {x_vec.shape}, x_vec value: {x_vec}")
 # make a prediction
 f_wb = predict_single_loop(x_vec,w_init,b_init) 
@@ -54,7 +54,7 @@ def predict(x,w,b):
     p = np.dot(x,w)+b
     return p
 # get a row from our training data
-x_vec1 = X_train[0,:]
+x_vec1 = X_train[1,:]
 print(f"x_vec shape {x_vec.shape}, x_vec value: {x_vec}")
 f_wb1 = predict(x_vec1,w_init,b_init)
 print(f"f_wb shape {f_wb1.shape}, prediction: {f_wb1}")
@@ -72,7 +72,7 @@ def compute_cost(X,y,w,b):
       cost (scalar): cost
     """
     m = X.shape[0]
-    cost = 0.0
+    cost = 0
     for i in range(m):
         f_wb_i = np.dot(X[i],w)+b #(n,)(n,) = scalar (see np.dot)
         cost = cost + (f_wb_i - y[i])**2       #scalar
@@ -95,7 +95,7 @@ def compute_gradient(X, y, w, b):
     """
     m,n = X.shape           #(number of examples, number of features)
     dj_dw = np.zeros((n,))
-    dj_db = 0.
+    dj_db = 0
 
     for i in range(m):                             
         err = (np.dot(X[i], w) + b) - y[i]   
@@ -156,7 +156,7 @@ def gradient_descent(X, y, w_in, b_in, cost_function, gradient_function, alpha, 
 
 # initialize parameters
 initial_w = np.zeros_like(w_init)
-initial_b = 0.
+initial_b = 0
 # some gradient descent settings
 iterations = 1000
 alpha = 5.0e-7
@@ -168,11 +168,11 @@ print(f"b,w found by gradient descent: {b_final:0.2f},{w_final} ")
 m,_ = X_train.shape
 for i in range(m):
     print(f"prediction: {np.dot(X_train[i], w_final) + b_final:0.2f}, target value: {y_train[i]}")
-# plot cost versus iteration  
-fig, (ax1, ax2) = plt.subplots(1, 2, constrained_layout=True, figsize=(12, 4))
-ax1.plot(J_hist)
-ax2.plot(100 + np.arange(len(J_hist[100:])), J_hist[100:])
-ax1.set_title("Cost vs. iteration");  ax2.set_title("Cost vs. iteration (tail)")
-ax1.set_ylabel('Cost')             ;  ax2.set_ylabel('Cost') 
-ax1.set_xlabel('iteration step')   ;  ax2.set_xlabel('iteration step') 
-plt.show()
+# # plot cost versus iteration  
+# fig, (ax1, ax2) = plt.subplots(1, 2, constrained_layout=True, figsize=(12, 4))
+# ax1.plot(J_hist)
+# ax2.plot(100 + np.arange(len(J_hist[100:])), J_hist[100:])
+# ax1.set_title("Cost vs. iteration");  ax2.set_title("Cost vs. iteration (tail)")
+# ax1.set_ylabel('Cost')             ;  ax2.set_ylabel('Cost') 
+# ax1.set_xlabel('iteration step')   ;  ax2.set_xlabel('iteration step') 
+# plt.show()
