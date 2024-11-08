@@ -2,15 +2,20 @@ import copy,math
 import numpy as np
 import matplotlib.pyplot as plt
 plt.style.use(r"/Users/nathansaw/Desktop/untitled folder/machine_learning_specialization/supervised_learning/deeplearning1.mplstyle")
+#This modifies the default print options for numpy arrays, setting the precision to 2 decimal places for clearer output.
 np.set_printoptions(precision=2)    ## reduced display precision on numpy arrays
+# 2D numpy array representing the features of the training dataset, where each row corresponds to a different example (house) and each column represents a feature (e.g., size, number of rooms, etc.)
 X_train = np.array([[2104, 5, 1, 45], [1416, 3, 2, 40], [852, 2, 1, 35]])
+#1D numpy array representing the target values (house prices) for each example in X_train
 y_train = np.array([460, 232, 178])
 # data is stored in numpy array/matrix
 # print(f"X shape: {X_train.shape}, X Type: {type(X_train)}")
 # print(f"X_train : {X_train}")
 # print(f"Y shape: {y_train.shape}, Y Type: {type(y_train)}")
 # print(f"Y_train : {y_train}")
+#initializes the bias term for the linear regression model.
 b_init = 785.1811367994083
+# initializes the weights (model parameters) for each feature. The length of this array should match the number of features in X_train.
 w_init = np.array([0.39133535, 18.75376741, -53.36032453, -26.42131618])
 #print(f"w_init shape: {w_init.shape}, b_init type: {type(b_init)}")
 def predict_single_loop(x,w,b):
