@@ -9,7 +9,7 @@ dlblue = '#0096ff'; dlorange = '#FF9300'; dldarkred='#C00000'; dlmagenta='#FF40F
 plt.style.use(r'C:\Users\Saw\Desktop\machine learning\machine_learning_specialization\supervised_learning\deeplearning1.mplstyle')
 
 def load_data_multi():
-    data = np.loadtxt("data/ex1data2.txt", delimiter=',')
+    data = np.loadtxt(r"C:\Users\Saw\Desktop\machine learning\machine_learning_specialization\supervised_learning\houses.txt", delimiter=',')
     X = data[:,:2]
     y = data[:,2]
     return X, y
