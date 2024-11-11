@@ -13,10 +13,7 @@ def cost_compute(x,y,w,b):
     the_sum_of_cost = 0
     for i in range(total_samples):
         f_x = (w*x[i])+b
-        print(f"f_x : {f_x}")
-        print(f"x[i] : {x[i]}")
         c_function = (f_x - y[i])**2
-        print(f"y[i] : {y[i]}")
         the_sum_of_cost+= c_function
     total_cost = (1/(2*total_samples))*the_sum_of_cost
     return total_cost
