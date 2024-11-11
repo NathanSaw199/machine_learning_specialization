@@ -8,4 +8,9 @@ plt.style.use(r'C:\Users\Saw\Desktop\machine learning\machine_learning_specializ
 # load the dataset
 X_train, y_train = load_house_data()
 X_features = ['size(sqft)','bedrooms','floors','age']
-print(X_features)
+fig, ax = plt.subplots(1,4, figsize=(12,3),sharey=True)
+for i in range(len(ax)):
+    ax[i].scatter(X_train[:,i],y_train)
+    ax[i].set_xlabel(X_features[i])
+ax[0].set_ylabel('price(1000s)')
+plt.show()
