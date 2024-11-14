@@ -12,6 +12,9 @@ y_train = np.array([0, 0, 0, 1, 1, 1])
 # ax.set_ylabel('$x_1$', fontsize=12)
 # ax.set_xlabel('$x_0$', fontsize=12)
 # plt.show()
+
+#def sigmoid(z):
+    #return 1 / (1 + np.exp(-z))
 def compute_gradient_logistic(X,y,w,b):
     """
     Computes the gradient for logistic regression 
