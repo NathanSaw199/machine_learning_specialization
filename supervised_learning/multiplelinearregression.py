@@ -1,7 +1,7 @@
 import copy,math
 import numpy as np
 import matplotlib.pyplot as plt
-plt.style.use(r"/Users/nathansaw/Desktop/untitled folder/machine_learning_specialization/supervised_learning/deeplearning1.mplstyle")
+plt.style.use(r'C:\Users\Saw\Desktop\machine learning\machine_learning_specialization\supervised_learning\deeplearning1.mplstyle')
 #This modifies the default print options for numpy arrays, setting the precision to 2 decimal places for clearer output.
 np.set_printoptions(precision=2)    ## reduced display precision on numpy arrays
 # 2D numpy array representing the features of the training dataset, where each row corresponds to a different example (house) and each column represents a feature (e.g., size, number of rooms, etc.)

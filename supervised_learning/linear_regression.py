@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from lab_utils_uni import plt_intuition,plt_stationary,plt_update_onclick,soup_bowl
-plt.style.use(r"/Users/nathansaw/Desktop/untitled folder/machine_learning_specialization/supervised_learning/deeplearning1.mplstyle")
+plt.style.use(r'C:\Users\Saw\Desktop\machine learning\machine_learning_specialization\supervised_learning\deeplearning1.mplstyle')
 
 # x_train = np.array([1.0, 1.7, 2.0, 2.5, 3.0, 3.2])
 # y_train = np.array([250, 300, 480,  430,   630, 730,])
