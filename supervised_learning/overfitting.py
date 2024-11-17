@@ -166,3 +166,40 @@ print(f"Regularized dj_dw:\n {dj_dw_tmp.tolist()}", )
 plt.close("all")
 display(output)
 ofit = overfit_example(True)
+# UNQ_C4
+# GRADED FUNCTION: predict
+
+def predict(X, w, b): 
+    """
+    Predict whether the label is 0 or 1 using learned logistic
+    regression parameters w
+    
+    Args:
+      X : (ndarray Shape (m,n)) data, m examples by n features
+      w : (ndarray Shape (n,))  values of parameters of the model      
+      b : (scalar)              value of bias parameter of the model
+
+    Returns:
+      p : (ndarray (m,)) The predictions for X using a threshold at 0.5
+    """
+    # number of training examples
+    m, n = X.shape   
+    p = np.zeros(m)
+   
+    ### START CODE HERE ### 
+    # Loop over each example
+    for i in range(m):
+        # Compute the prediction
+        z = np.dot(X[i], w) + b
+        p[i] = sigmoid(z) > 0.5
+
+
+    return p
+# Test your predict code
+np.random.seed(1)
+tmp_w = np.random.randn(2)
+tmp_b = 0.3    
+tmp_X = np.random.randn(4, 2) - 0.5
+
+tmp_p = predict(tmp_X, tmp_w, tmp_b)
+print(f'Output of predict: shape {tmp_p.shape}, value {tmp_p}')
