@@ -1,6 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
-plt.style.use('./deeplearning.mplstyle')
+plt.style.use(r"C:\Users\Saw\Desktop\machine learning\machine_learning_specialization\machine_learning\advanced_algorithms\deeplearning.mplstyle")
 import tensorflow as tf
 from IPython.display import display, Markdown, Latex
 from matplotlib.widgets import Slider
